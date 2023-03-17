@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" href="CSS/login.css"/>
+        <link rel="icon" type="text/css" href="images/logotitle.png" style="width: 100px;">
+        <title>Đăng nhập</title>
+        <style>
+            
+            img{
+                padding-left: 120px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="register">
+            <img src="images/logotitle.png" width="70%;" alt="">
+            <h1 style="text-align: center;">Đăng nhập</h1>
+            <p style="text-align: center;">Vui lòng điền thông tin để đăng nhập</p>
+            <hr>
+            <label for="username1"><b>Tên đăng nhập</b></label>
+            <input type="text" placeholder="Họ và tên" name="username1" id="username1">
+        
+            <label for="password1"><b>Mật khẩu </b></label>
+            <input type="password" placeholder="********" name="password1" id="password1">
+        
+            <hr>
+            
+            <button type="submit" class="submit" onclick="return validate1()">Đăng nhập</button>
+        </div>
+        <div class="register login">
+            <p>Bạn chưa có tài khoản? <a href="register.html">Đăng kí</a></p>
+        </div>
+    </body>
+    <script language="javascript" src="JS/login.js"></script>
+    <script language="javascript" src="JS/register.js"></script>
+</html>

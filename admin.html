@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="text/css" href="images/logotitle.png" style="width: 100px;">
+  <title>Dashboard</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="navigation">
+      <ul>
+        <li >
+          <a href="#" style="color:black ; font-size :20px;font-family: 'Source Sans Pro', sans-serif;">
+            <span class="icon"><i class='bx bxl-android'></i></span>
+            <span class="title"><b>ADMIN PETSHOP</b></span>
+          </a>
+        </li>
+        <li>
+          <a href="admin.html" class="active" style="color:black ;" >
+            <span class="icon"><i class='bx bx-home'></i></span>
+            <span class="title"><b>Dashboard</b> </span>
+          </a>
+        </li>
+        <li>
+          <a href="management.html">
+            <span class="icon"><i class='bx bxl-product-hunt'></i></span>
+            <span class="title">Quản lý sản phẩm</span>
+          </a>
+        </li>
+        <li>
+          <a href="user.html">
+            <span class="icon"><i class='bx bxs-user-account'></i></span>
+            <span class="title">Quản lý người dùng</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><i class='bx bx-food-menu'></i></span>
+            <span class="title">Quản lý đơn hàng</span>
+          </a>
+        </li>
+        <li>
+          <a href="index.html">
+            <span class="icon"><i class='bx bx-captions'></i></span>
+            <span class="title">Quản lý giao diện</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><i class='bx bx-message'></i></span>
+            <span class="title">Message</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><i class='bx bx-cog'></i></span>
+            <span class="title">Cài đặt </span>
+          </a>
+        </li>
+        <li>
+          <a href="login.html">
+            <span class="icon"><i class='bx bx-log-in'></i></span>
+            <span class="title">Đăng xuất </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+
+    <div class="main">
+      <div class="topbar" style="background-color:gray ;">
+        <div class="toggle" style="margin-left:-10px">
+          <i class='bx bx-menu'></i>
+        </div>
+        <div class="search">
+          <label>
+            <input type="text" placeholder="Tìm kiếm">
+            <i class='bx bx-search-alt-2'></i>
+          </label>
+        </div>
+        <div class="user">
+          <img src="images/shin4.jfif" width="100" height="100" alt="">
+        </div>
+      </div>
+      <div class="cardBox">
+        <div class="card">
+          <div>
+            <div class="numbers row">
+              <span class="total-cart total-1"></span>
+              <div class="d-inline">84.562.215<sup>đ </sup></div>
+            </div>
+            <div class="cardName">Doanh thu</div>
+          </div>
+          <div class="iconBx">
+            <i class='bx bx-money'></i>
+          </div>
+        </div>
+        <div class="card">
+          <div>
+            <div class="numbers total-count">528</div>
+            
+            <div class="cardName">Sản phẩm</div>
+          </div>
+          <div class="iconBx">
+            <i class='bx bx-cart-alt'></i>
+          </div>
+        </div>
+        <div class="card">
+          <div>
+            <div class="numbers">462</div>
+            <div class="cardName">Đánh giá</div>
+          </div>
+          <div class="iconBx">
+            <i class='bx bx-chat'></i> </div>
+        </div>
+        <div class="card">
+          <div>
+            <div class="numbers">3.815</div>
+            <div class="cardName">Lượt xem</div>
+          </div>
+          <div class="iconBx">
+            <i class="bi bi-eye"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="graphBox">
+        <div class="box">
+          <h3>Lượt tiếp cận</h3>
+          <canvas id="myChart"></canvas>
+        </div>
+        <div class="box">
+          <h3>Doanh thu theo tháng</h3>
+          <canvas id="earning"></canvas>
+        </div>
+      </div>
+
+
+      <div class="details">
+        <div class="recentOrders">
+          <div class="cardHeader">
+            <h2>Đơn hàng gần đây </h2>
+            <a href="#" class="btn">Xem tất cả</a>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <td>Tên</td>
+                <td>Tổng tiền</td>
+                <td>Thanh toán</td>
+                <td>Trạng thái</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Nguyễn Hoài Anh</td>
+                <td>68.350 <sup>đ</sup></td>
+                <td>Tiền mặt</td>
+                <td><span class="status delivered">Đã giao hàng</span></td>
+              </tr>
+              <tr>
+                <td>Nguyễn Văn Hào</td>
+                <td>608.520 <sup>đ</sup></td>
+                <td>Tiền mặt</td>
+                <td><span class="status delivered">Đã giao hàng</span></td>
+              </tr>
+              <tr>
+                <td>Nguyễn Đặng Thảo Uyên</td>
+                <td>521.800 <sup>đ</sup></td>
+                <td>Chuyển khoản</td>
+                <td><span class="status delivered">Đã giao hàng</span></td>
+              </tr>
+              <tr>
+                <td>Trần Văn Cường</td>
+                <td>86.000 <sup>đ</sup></td>
+                <td>Tiền mặt</td>
+                <td><span class="status delivered">Đã giao hàng</span></td>
+              </tr>
+              <tr>
+                <td>Nguyễn Thị Duyên</td>
+                <td>245.350 <sup>đ</sup></td>
+                <td>Tiền mặt</td>
+                <td><span class="status delivered">Đã giao hàng</span></td>
+              </tr>
+              <tr>
+                <td>Nguyễn Anh</td>
+                <td>58.350 <sup>đ</sup></td>
+                <td>Tiền mặt</td>
+                <td><span class="status delivered">Đã giao hàng</span></td>
+              </tr>
+              <tr>
+                <td>Nguyễn Hoài Anh Thư</td>
+                <td>68.350 <sup>đ</sup></td>
+                <td>Chuyển khoản</td>
+                <td><span class="status delivered">Đã giao hàng</span></td>
+              </tr>
+              <tr>
+                <td>Lê Anh Tuấn</td>
+                <td>68.350 <sup>đ</sup></td>
+                <td>Tiền mặt</td>
+                <td><span class="status delivered">Đã giao hàng</span></td>
+              </tr>
+              <tr>
+                <td>Trương Diệp Anh</td>
+                <td>720.300 <sup>đ</sup></td>
+                <td>Chuyển khoản</td>
+                <td><span class="status delivered">Đã giao hàng</span></td>
+              </tr>
+              <tr>
+                <td>Nguyễn Hoài Anh</td>
+                <td>68.350 <sup>đ</sup></td>
+                <td>Tiền mặt</td>
+                <td><span class="status delivered">Đã giao hàng</span></td>
+              </tr>
+              <tr>
+                <td>Nguyễn Bảo Ngọc</td>
+                <td>543.800 <sup>đ</sup></td>
+                <td>Chuyển khoản</td>
+                <td><span class="status delivered">Đã giao hàng</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="recentCustomers">
+          <div class="cardHeader">
+            <h2>Người xem</h2>
+          </div>
+          <table>
+            <tr>
+              <td width="60px">
+                <div class="imgBx"><img src="images/shin4.jfif" alt=""></div>
+              </td>
+              <td>
+                <h4>Bảo Ngọc <br><span>Quảng Bình</span></h4>
+              </td>
+            </tr>
+            <tr>
+              <td width="60px">
+                <div class="imgBx"><img src="images/shin1.jfif" alt=""></div>
+              </td>
+              <td>
+                <h4>Nguyễn Hào <br><span>Quảng Bình</span></h4>
+              </td>
+            </tr>
+            <tr>
+              <td width="60px">
+                <div class="imgBx"><img src="images/shin2.jfif" alt=""></div>
+              </td>
+              <td>
+                <h4>Thảo Uyên<br><span>Huế</span></h4>
+              </td>
+            </tr>
+            <tr>
+              <td width="60px">
+                <div class="imgBx"><img src="images/shin3.jfif" alt=""></div>
+              </td>
+              <td>
+                <h4>Hoài Anh<br><span>Quảng Trị</span></h4>
+              </td>
+            </tr>
+            <tr>
+              <td width="60px">
+                <div class="imgBx"><img src="images/shin4.jfif" alt=""></div>
+              </td>
+              <td>
+                <h4>Nhân Duyên<br><span>KonTum</span></h4>
+              </td>
+            </tr>
+            <tr>
+              <td width="60px">
+                <div class="imgBx"><img src="images/shin1.jfif" alt=""></div>
+              </td>
+              <td>
+                <h4>Trấn Thành<br><span>Nghệ An</span></h4>
+              </td>
+            </tr>
+            <tr>
+              <td width="60px">
+                <div class="imgBx"><img src="images/shin2.jfif" alt=""></div>
+              </td>
+              <td>
+                <h4>Chi Bé <br><span>Quảng Nam</span></h4>
+              </td>
+            </tr>
+            <tr>
+              <td width="60px">
+                <div class="imgBx"><img src="images/shin3.jfif" alt=""></div>
+              </td>
+              <td>
+                <h4>Tiểu Đào<br><span>Đà Nẵng</span></h4>
+              </td>
+            </tr>
+            
+          </table>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="JS/admin.js"></script>
+<script language="Javascript" src="JS/cart.js"></script>
+  <script>
+  /// toggle///
+  let toggle = document.querySelector('.toggle');
+  let navigation = document.querySelector('.navigation');
+  let main = document.querySelector('.main');
+
+  toggle.onclick = function () {
+    navigation.classList.toggle('active')
+    main.classList.toggle('active')
+  }
+
+
+
+  /////
+  let list = document.querySelectorAll('.navigation li');
+
+  function activeLink() {
+    list.forEach((item) =>
+      item.classList.remove('hovered'));
+    this.classList.add('hovered');
+  }
+  list.forEach((item) =>
+    item.addEventListener('mouseover', activeLink));
+</script>
+
+</html>

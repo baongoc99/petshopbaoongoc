@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" href="CSS/login.css"/>
+        <link rel="icon" type="text/css" href="images/logotitle.png" style="width: 100px;">
+        <title>Đăng kí</title>
+        
+    </head>
+    <body>
+        <script language="javascript" src="JS/register.js"></script>
+        <div class="register">
+         
+            <h1 style="text-align: center;">Đăng ký</h1>
+            <p style="text-align: center;">Vui lòng điền thông tin để đăng ký</p>
+            <hr>
+            <label for="username"><b>Tên đăng nhập (*) </b></label>
+            <input type="text" placeholder="Họ và tên" name="username" id="username">
+            <label for="email"><b>Mail (*) </b></label>
+            <input type="text" placeholder="Mail" name="mail" id="mail">
+            <label for="password"><b>Mật khẩu (*) </b></label>
+            <input type="password" placeholder="******" name="password" id="password">
+            <label for="password-repeat"><b>Nhập lại mật khẩu (*) </b></label>
+            <input type="password" placeholder="******" name="password-repeat" id="password-repeat">
+            <hr>
+            <!-- <p>Để tạo tài khoản vui lòng đồng ý với điều khoản của chúng tôi <a href="#">Terms & amp; Privacy</a></p> -->
+            <button type="submit" class="submit" onclick="return validate()">Đăng ký</button>
+        </div>
+        <div class="register login">
+            <p>Bạn đã có tài khoản rồi? <a href="login.html">Đăng nhập</a></p>
+        </div>
+    </body>
+</html>

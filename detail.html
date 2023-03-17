@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="text/css" href="images/logotitle.png" style="width: 100px;">
+	<title>Chi tiết</title>
+	<link rel="stylesheet" type="text/css" href="css/detail.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script>
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+	        document.getElementById("myBtn").style.display = "block";
+	    } else {
+	        document.getElementById("myBtn").style.display = "none";
+	    }
+	}
+
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+	    document.body.scrollTop = 0;
+	    document.documentElement.scrollTop = 0;
+	}
+	</script>
+	<script>
+		  'use strict'
+
+		  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+		  var forms = document.querySelectorAll('.needs-validation')
+
+		  // Loop over them and prevent submission
+		  Array.prototype.slice.call(forms)
+		    .forEach(function (form) {
+		      form.addEventListener('submit', function (event) {
+		        if (!form.checkValidity()) {
+		          event.preventDefault()
+		          event.stopPropagation()
+		        }
+
+		        form.classList.add('was-validated')
+		      }, false)
+		    })
+		
+	</script>
+
+</head>
+<body>
+	<header>
+		<div class="header">
+			<div class="row text-center  " style="padding-top: 5px;">
+				<div class="col-4 text-start " style="padding-left:60px">
+					<a href="">Kênh người bán </a>|					
+					<a href="">Tải ứng dụng </a>|
+					<a href="">Kết nối </a>
+					<a href=""><i class="fab fa-facebook"></i></a>
+					<a href=""><i class="fab fa-instagram"></i></a>  
+				</div>
+				<div class="col-4">
+				</div>
+				<div class="col-4 text-end" style="padding-right:60px">
+					<a href=""><i class="far fa-bell"></i> Thông báo </a>|
+					<a href=""><i class="far fa-question-circle"></i> Hỗ trợ </a>|
+					<a data-bs-toggle="offcanvas" href="#offcanvasExample1" role="button" aria-controls="offcanvasExample"><i class="far fa-user"></i> Đăng nhập </a>
+					  <form class="offcanvas offcanvas-end needs-validation" tabindex="-1" id="offcanvasExample1" aria-labelledby="offcanvasExampleLabel" novalidate >
+	                    <div class="offcanvas-header" style="background-color: #ee4d2d	;">
+	                      <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+	                        <div style="margin-bottom: -30px;" class="title">
+	                          <p style="font-size:25px; margin-left: 110px; margin-bottom: 10px;" class="text-center">Đăng nhập</p>
+	                          <hr style="margin-left:110px;">
+	                        </div>
+	                      </h5>
+	                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+	                    </div>
+	                    <div class="offcanvas-body">
+	                      <div class="row">
+		                      <div class="logo" style="padding-bottom:20px">
+		                        <a href=""><img style="width: 370px; height: 170px" src="images/logo.png"></a>
+		                      </div>
+	                      </div>
+	                      <div class="form-floating mb-3" >
+	                        <input style="width: 90%; margin-left: 16px; height: 40px;" type="email" class="form-control rounded-2" id="validationCustom01" placeholder="name@example.com" required>
+	                        <label style="font-size: 15px; margin-left: 20px; margin-top: -7px;" class="form-label text-muted " for="validationCustom01" >Email/Số điện thoại/Tên đăng nhập</label>
+	                        <div class="valid-feedback">
+						      Hợp lệ!
+						    </div>
+	                      </div>
+	                      <div class="form-floating mb-3">
+	                        <input style="width: 90%; margin-left: 16px; height: 40px;" type="email" class="form-control rounded-2" id="floatingInput" placeholder="name@example.com">
+	                        <label style="font-size: 15px; margin-left: 20px; margin-top: -7px;" class="text-muted" for="floatingInput">Mật khẩu</label>
+	                      </div>
+	                      <div class="row">
+	                        <div class="col-auto">
+	                            <div class="form-check">
+	                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"style="margin-left: -8px;">
+	                                <label class="form-check-label" for="flexCheckDefault">
+	                                </label>
+	                              </div>
+	                        </div>
+	                        <div class="col-auto" style="padding-bottom:20px">
+	                            <p  class="text-muted" style="margin-left: -18px;">Nhớ mật khẩu</p>
+	                        </div>
+	                        <button style="background-color: #ee4d2d;width: 250px;margin-left: 62px; " type="submit" class="btn btn-danger mb-3 a rounded-5 text-center" >Đăng nhập</button>
+	                        <div class="row">
+	                          <div style="margin-left: 20px; margin-top: 10px;" class="col text-start">
+	                            <a class="text-primary" href="#">Quên mật khẩu</a>
+	                          </div>
+	                          <div style="margin-top: 10px;" class="col text-end text-primary">
+	                            <a class="text-primary" href="#">Đăng nhập với SMS</a>
+	                          </div>
+	                          <hr style="margin-left:15px;"><br>
+	                          <div style="margin-left: -10px;padding-top: 20px;" class="row">
+	                            <div class="col">
+	                              <button type="button " style="border:none;" class="btn "><i class="fa-brands fa-facebook text-primary" style="font-size: 30px;"></i></button>
+	                            </div>
+	                            <div class="col">
+	                              <button type="button" style="border:none;" class="btn "><i class="fa-brands fa-google text-success" style="font-size: 30px;"></i></button>
+	                            </div>
+	                            <div class="col">
+	                              <button type="button" style="border:none;" class="btn "><i class="fa-brands fa-apple" style="font-size: 35px;margin-top: -5px;"></i></button>
+	                            </div>
+	                          </div>
+	                          <p style="margin-top: 20px; margin-left: -35px;" class="text-muted">Bạn là khách hàng mới?<a style="color:blue ; font-size: 15px;" href="#"> Đăng ký</a></p>
+	                        </div>
+	                      </div>
+	                    </div>
+	                  </form>
+	                </div>
+	              </div>
+				</div><hr>
+			</div>
+			<div class="row">
+				<div class="col-2 logo_1">
+					<a href="index.html"><img src="images/logo.png" width="300px" ></a>
+				</div>
+				<div class="col-8">
+					<nav class="navbar">
+					  <form class="container-fluid">
+					    <div class="input-group">
+					      <input type="text" class="form-control" placeholder="Đăng ký và nhận voucher bạn mới đến 70K!" aria-label="Username" aria-describedby="basic-addon1">
+					      <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg></span>
+					    </div>
+					  </form>
+					</nav>
+					<h6>WELLCOME TO PETSHOP BAOO NGOC !!</h6>
+				</div>
+				<div class="col-2 buy">
+					<a href="cart.html" align="left"><i class="fas fa-shopping-cart" ></i></a>
+					
+				</div>
+			</div>
+		</div>	
+		<div class="header2">
+			<div class="row">
+				<div class=" col-md-2">
+					<div class="btn_menu_cate">
+						<div class="btn-group">
+						  <button class="btn" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"><span style="font-weight: bolder;"><i class="fa fa-bars"></i> DANH MỤC SẢN PHẨM</span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						    <div class="danhmuc">
+							  <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+							  	<button type="button" class="btn text-start">TẤT CẢ SẢN PHẨM</button>
+							    <button type="button" class="btn text-start">Hot Deal <img src="images/Flame-rev.gif" width="20px"></button>
+							    <button type="button" class="btn text-start">Tắm Cắt Tỉa Lông </button>
+							    <div class="btn-group dropend" role="group">
+							      <button id="btnGroupVerticalDrop1" type="button" class="btn dropdown-toggle text-start" data-bs-toggle="dropdown" aria-expanded="false">
+							        Thức Ăn
+							      </button>
+							      <ul class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1" style="">
+							        <li><a class="dropdown-item" href="#">Thức Ăn Cho Chó</a></li>
+							        <li><a class="dropdown-item" href="#">Thức Ăn Cho Mèo</a></li>
+							      </ul>
+							    </div>
+							    <button type="button" class="btn text-start">Sữa Tắm</button>
+							    <div class="btn-group dropend" role="group">
+							      <button id="btnGroupVerticalDrop2" type="button" class="btn dropdown-toggle text-start" data-bs-toggle="dropdown" aria-expanded="false">
+							        Quần Áo - Phụ Kiện
+							      </button>
+							      <ul class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop2">
+							        <li><a class="dropdown-item" href="#">Cho Chó</a></li>
+							        <li><a class="dropdown-item" href="#">Cho Mèo</a></li>
+							      </ul>
+							    </div>
+							    <button type="button" class="btn text-start">Nhà - Nệm - Lồng</button>
+							    <button type="button" class="btn text-start">Vòng Cổ - Dây Dẫn</button>
+							    <button type="button" class="btn text-start">Túi Xách - Vận Chuyển</button>
+							    <button type="button" class="btn text-start">Đồ Chơi - Huấn Luyện</button>
+							    <button type="button" class="btn text-start">Dụng Cụ Ăn Uống</button>
+							    <button type="button" class="btn text-start">Chăm Sóc Sức Khỏe</button>
+							    <button type="button" class="btn text-start">Dụng Cụ Vệ Sinh</button>
+							    <button type="button" class="btn text-start">Dụng Cụ Grooming</button>
+							    <button type="button" class="btn text-start">Dịch Vụ Khác</button>
+							    <button type="button" class="btn text-start">Sản Phẩm Mới</button>
+							  </div>
+							</div>
+						  </ul>
+						</div>
+					</div>
+				</div>
+				<div class=" col-md-10">
+					<a href="">Trang Chủ</a>
+					<a href="">Giới Thiệu</a>
+					<a href="">Sản Phẩm</a>
+					<a href="spa.html">Dịch vụ Spa-Grooming</a>
+					<a href="">Kinh Nghiệm</a>
+					<a href="">Khuyến Mãi</a>
+					<a href="">Liên Hệ</a>
+				</div>
+			</div>
+		</div>	
+	</header>
+	<content >
+		<div class="row sanpham" style="margin-left:100px;margin-right: 100px;padding-top:30px;padding-bottom:30px ;">
+			<div class="col-sm-6 border-end">
+				<div class="mt-2 home-product ">     
+	                <div id="nxt" class="carousel slide" data-bs-ride="true">
+	                    <div id="thumbnail" class="carousel-indicators ">
+	                        <button type="button" data-bs-target="#nxt" data-bs-slide-to="0"
+	                            class="col-3 active tren" aria-current="true" aria-label="Slide 1">
+	                            <img class="d-block w-75"  
+	                                src="images/aocamtho.png"
+	                                class="img-fluid" />
+	                        </button>
+	                        <button type="button" data-bs-target="#nxt" data-bs-slide-to="1"
+	                            aria-label="Slide 2" class="col-3 tren">
+	                            <img class="d-block w-75 "
+	                                src="images/size.png"
+	                                class="img-fluid" />
+	                        </button>
+	                       
+	                    </div>
+	                    <div class="carousel-inner">
+	                        <div class="carousel-item active">
+	                            <div class="">
+	                                <img src="images/aocamtho.png "
+	                                class="d-block  "  alt="...">
+	                        </div>
+	                            </div>
+	                        <div class="carousel-item">
+	                            <div class="">
+	                                <img src="images/size.png"
+	                                class="d-block " alt="...">
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <button class="carousel-control-prev" type="button"
+	                        data-bs-target="#nxt" data-bs-slide="prev">
+	                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	                        <span class="visually-hidden">Previous</span>
+	                    </button>
+	                    <button class="carousel-control-next" type="button"
+	                        data-bs-target="#nxt" data-bs-slide="next">
+	                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	                        <span class="visually-hidden">Next</span>
+	                    </button>
+	                </div>         
+	        	</div>
+			</div>
+			<div class="col-sm-6 ttsp " style="padding-left:30px">
+				<h2 style="color: rgba(255, 99, 71, 1); ">ÁO CAM THỎ LV CHO CHÓ MÈO</h2>
+				<p class="text-muted">MÃ SỐ SẢN PHẨM: PVN6573</p>
+				<p style="color: red; font-size: 30px;">56.000<sup>₫</sup></p>
+				<div class="row">
+					<div class="col-sm-3">
+						<p>Kích thước:</p>
+					</div>
+					  
+					<div class="col-sm-6 size" style="color: red;">
+						<div class="btn-group" role="group" aria-label="Third group">
+					    <button type="button" class="btn btn-danger">S</button>
+					  </div>
+					  <div class="btn-group" role="group" aria-label="Third group">
+					    <button type="button" class="btn btn-danger">M</button>
+					  </div>
+					  <div class="btn-group" role="group" aria-label="Third group">
+					    <button type="button" class="btn btn-danger">L</button>
+					  </div>
+					</div>
+				</div><br>
+       			<div class="row" style="padding-top: 7px;margin-left: -12px;">
+       				<div class="col-sm-3">
+       					<p>Số lượng:</p>
+       				</div>
+       				<div class="col-sm-3" style="margin-top: -5px;">
+       					<input type="number" class="form-control" id="inputnumber" value="1"></p>
+       				</div>
+       			</div><br>
+       			<p class ="text-muted">ÁO CAM THỎ LV CHO CHÓ MÈO 1. Đặc điểm nổi bật Áo thun sát nách in hoạt hình cho chó mèo, được thiết kế và sản xuất trực tiếp tại Việt Nam, có độ bền cao, chất liệu thoáng mát cho các bé thú cưng vui chơi cả ngày dài. Sản phẩm phù hợp cho các bé chó mèo ở mọi độ tuổi. Khách đặt hàng vui lòng chọn size theo hướng dẫn ở mục hình ảnh, ngoài ra sản phẩm có thể sai số 1-2cm do chất liệu, phom áo ...</p>	<br>
+       			<div class="row text-start submit1" >
+					<div class="col-md-9"style="text-color:white;">
+	       				<a href="cart.html"><button type="submit" name="btn-submit" class="btn-danger btn-submit" style="text-color:white;"><i class="fas fa-shopping-cart"></i> Thêm vào giỏ</button></a>
+	       					<button class="btn-danger" data-bs-toggle="offcanvas" href="#offcanvasExample1" role="button" aria-controls="offcanvasExample" style="text-color:white;" > Mua ngay</button>
+	       					<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+							  	<div class="offcanvas-header ">
+							  		<img src="images/logo.png"width="399"height="200" class="offcanvas-title text-center"id="offcanvasRightLabel">
+							    	<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+							  	</div>
+							  	<div class="offcanvas-body">
+							    	<div class="row text-center">
+							  		</div>
+							  	</div>
+							</div>
+	       				</div>
+	       			<div class="col-md-4"></div>			
+	       		</div>	
+			</div>
+		</div><hr width="80%" style="margin-left:150px">
+		<div class="row" style="margin-left:100px;margin-right: 100px;padding-top:30px;padding-bottom:30px ;">
+			<nav >
+			  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+			    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><p style="font-size:20px">Mô tả</p></button>
+			    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><p style="font-size:20px">Chính sách</p></button>
+			  </div>
+			</nav>
+			<div class="tab-content border-end border-start border-bottom" style="margin-left: 12px;border-right: 12px;" id="nav-tabContent">
+			  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+			  	<h1 style="padding-top:30px; text-align: center;color: rgba(255, 99, 71, 1);padding-bottom: 30px;">ÁO CAM THỎ LV CHO CHÓ MÈO</h1>
+			  	<div class="row">
+			  		<div class="col-sm-8">
+			  			<h2> Đặc điểm nổi bật</h2>
+					  	<p>Áo thun sát nách in hoạt hình cho chó mèo, được thiết kế và sản xuất trực tiếp tại Việt Nam, có độ bền cao, chất liệu thoáng mát cho các bé thú cưng vui chơi cả ngày dài. Sản phẩm phù hợp cho các bé chó mèo ở mọi độ tuổi. Khách đặt hàng vui lòng chọn size theo hướng dẫn ở mục hình ảnh, ngoài ra sản phẩm có thể sai số 1-2cm do chất liệu, phom áo  khách nên inbox trực tiếp bên shop để được tư vấn size chính xác nhất. </p>
+					  	<p>Thông tin sản phẩm:<br>
+						- Tên sản phẩm: Áo thun sát nách in hoạt hình<br>
+						- Chất liệu vải: Vải thun thoáng mát, ít bám lông thích hợp mặc hè, mặc đi chơi, đi ngủ,...<br>
+						- Chất Hình in/ hình thêu: Chi tiết chắc chắn giặt máy, vò tay không hỏng<br>
+						- Sản phẩm có size từ 1kg đến 17-18kg<br>
+						- Màu sắc: Như hình<br>
+						- Kích thước:<br>
+							&emsp; +Size S: Dài 19-20cm Ngực 28cm<br>
+							&emsp; +Size M: Dài 30-31cm Ngực 48cm<br>
+							&emsp; +Size L: Dài 40-41cm Ngực 68cm</p>
+			  		</div>
+			  		<div class="col-sm-4">
+			  			<img src="images/aocamtho1.png" width="95%">
+			  		</div>
+			  	</div>
+			  </div>
+			  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0" >
+			  	<p style="padding-top:30px"><span style="font-weight: bolder;font-size: 20px;">PETSHOP BAOO NGOC</span> không chấp nhận trường hợp trả hàng lấy lại tiền.<br>
+			  	 - Quý khách có thể đổi qua sản phẩm có giá trị tương đương. <br>
+			  	 - SHOP chỉ nhận đổi các mặt hàng như: QUẦN ÁO - NÓN - GIÀY - YẾM ĐỊU CÚN - GIỎ XÁCH - NHÀ NỆM. <br>
+			  	 - Còn lại các sản phẩm khác SHOP tuyệt đối không nhận đổi trả. <br>
+			  	 - SHOP chỉ chấp nhận đổi trả trong trường hợp sản phẩm bị lỗi, không vừa với size đã mua trước đó. <br>
+			  	 - Không nhận đổi hàng vì lý do sở thích của khách Trong bất kỳ trường hợp nào.<br>
+			  	 - SHOP chỉ chấp nhận trường hợp đổi hàng còn mới, chưa qua sử dụng trong vòng 2 ngày kể từ ngày mua hàng Hàng đổi phải còn mới và giữ nguyên tình trạng ban đầu, còn nguyên bao bì, nguyên tem, chưa qua sử dụng.<br>
+			  	 - Các sản phẩm phải được làm sạch và lấy bớt lông ra, sản phẩm đổi không được có mùi lạ, mùi hôi.<br>
+			  	 - Hàng chỉ được đổi 1 lần Giá trị đổi hàng tính theo giá bán thực tế tại thời điểm mua hàng, nhưng phải bằng hoặc cao hơn sản phẩm muốn đổi.<br>
+			  	 - Đối với khách mua hàng Online: Khách hàng liên hệ với bộ phận bán hàng online để xác nhận đơn hàng muốn đổi và được hướng dẫn đổi hàng (không quá 2 ngày kể từ ngày nhận được sản phẩm).<br>
+			  	 - Inbox trực tiếp cho SHOP hoặc gọi số điện thoại (0913710333).<br>
+			  	 - Hàng chỉ đổi lại khi lỗi do nhà sản xuất, sai cỡ như khách hàng yêu cầu.<br>
+			  	- Quý khách vui lòng chịu phí vận chuyển nếu quý khách yêu cầu chúng tôi đem hàng đến đổi tận nhà <br>
+			  	- Đối với khách đến mua hàng trực tiếp: Quý khách vui lòng xuất trình hóa đơn mua hàng khi có yêu cầu đổi hàng.<br>
+			  	- SHOP chỉ hỗ trợ đổi size, lỗi thuộc về nhà sản xuất. Hàng đã mua tại SHOP khách vui lòng kiểm tra kĩ trước khi thanh toán.<br>
+			  	- Với mỗi đơn hàng chỉ được đổi tối đa 01 lần. Xin cảm ơn !</p>
+			  </div>
+			</div>
+		</div>
+		<div class="text-center splq">
+			<h2 style="color: red;padding-top: 50px;">SẢN PHẨM LIÊN QUAN</h2>
+			<hr  width="30%">
+		</div>
+		<div class="row row-cols-3 row-cols-md-5 g-4 splq1">
+			  <div class="col ">
+			    
+			    	<div class="card">
+				      <img src="images/aonobita.png" class="card-img-top" alt="...">
+				      <div class="card-body">
+				        <a href=""><h5 class="card-title">Áo Nobita</h5></a>
+				        <p class="card-text">54.000<sup>₫</sup> </p>
+				       
+				      </div>
+			    	</div>
+			  </div>
+			  <div class="col">
+			    
+			    	<div class="card">
+				      <img src="images/aogausoc.png" class="card-img-top" alt="...">
+				      <div class="card-body">
+				        <a href=""><h5 class="card-title">Áo gấu sọc</h5></a>
+				        <p class="card-text">56.000<sup>₫</sup> </p>
+				       
+				      </div>
+			    	</div>
+			  </div>
+			  <div class="col">
+			    
+			    	<div class="card">
+				      <img src="images/damngoisao.png" class="card-img-top" alt="...">
+				      <div class="card-body">
+				        <a href=""><h5 class="card-title">Đầm ngôi sao</h5></a>
+				        <p class="card-text">170.000<sup>₫</sup> </p>
+				        
+				      </div>
+			    	</div>
+			  </div>
+			  <div class="col">
+			    
+			    	<div class="card">
+				      <img src="images/aoluoigau.png" class="card-img-top" alt="...">
+				      <div class="card-body">
+				        <a href=""><h5 class="card-title">Áo lưới gấu</h5></a>
+				        <p class="card-text">48.000<sup>₫</sup> </p>
+				        
+				      </div>
+			    	</div>
+			  </div>
+			  <div class="col">
+			    
+			    	<div class="card">
+				      <img src="images/aohello.png" class="card-img-top" alt="...">
+				      <div class="card-body">
+				        <a href=""><h5 class="card-title">Áo Hello Kitty</h5></a>
+				        <p class="card-text">50.000<sup>₫</sup> </p>
+				        
+				      </div>
+			    	</div>
+			  </div>
+			  
+		</div>
+		<div class="row justify-content-center" style="padding-bottom: 20px;">
+			<button class="btn " type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="width: 100px;background-color: lightgray;color: red;">Xem thêm</button>
+			
+
+			<div class="collapse " id="collapseExample" style="padding-top: 20px">
+			    <div class="row row-cols-2 row-cols-md-5 g-4 splq1">
+				  <div class="col">
+				    
+				    	<div class="card">
+					      <img src="images/aotraicay.png" class="card-img-top" alt="...">
+					      <div class="card-body">
+					        <a href=""><h5 class="card-title">Áo trái cây</h5></a>
+					        <p class="card-text">52.000<sup>₫</sup> </p>
+					        
+					      </div>
+				    	</div>
+				  </div>
+				  <div class="col">
+				    
+				    	<div class="card">
+					      <img src="images/aogauhong.png" class="card-img-top" alt="...">
+					      <div class="card-body">
+					        <a href=""><h5 class="card-title">Áo gấu hồng</h5></a>
+					        <p class="card-text">64.000<sup>₫</sup> </p>
+					        
+					      </div>
+				    	</div>
+				  </div>
+				  <div class="col">
+				    
+				    	<div class="card">
+					      <img src="images/aodoremon.png" class="card-img-top" alt="...">
+					      <div class="card-body">
+					        <a href=""><h5 class="card-title">Áo Doremon</h5></a>
+					        <p class="card-text">56.000<sup>₫</sup> </p>
+					        
+					      </div>
+				    	</div>
+				  </div>
+				  <div class="col">
+				   
+				    	<div class="card">
+					      <img src="images/aoxanhdoremon.png" class="card-img-top" alt="...">
+					      <div class="card-body">
+					        <a href=""><h5 class="card-title">Áo xanh Doremon</h5></a>
+					        <p class="card-text">50.000<sup>₫</sup> </p>
+					        
+					      </div>
+				    	</div>
+				  </div>
+				  <div class="col">
+				    
+				    	<div class="card">
+					      <img src="images/aochaien.png" class="card-img-top" alt="...">
+					      <div class="card-body">
+					        <a href=""><h5 class="card-title">Áo Chaien</h5></a>
+					        <p class="card-text">54.000<sup>₫</sup> </p>
+					        
+					      </div>
+				    	</div>
+				  </div>
+				</div>
+			</div>
+		</div>
+
+
+
+	</content>
+	<footer>
+		<div class="row " style="margin-right: -10px;">
+			<div class="col-sm-3  text-center">
+				<img src="images/logo.png" width="80%" style="margin-top:-20px"><br>
+				<img src="images/facebook.png"style="width:40px; height:40px">
+				<img src="images/zalo.png" style="width:40px; height:40px">
+				<img src="images/sendo.png" style="width:40px; height:40px"><br>
+				<img src="images/logocuoi.png" width="50%">
+				
+			</div>
+			<div class="col-sm-3  ">
+				<h5 class="border_ft" >LIÊN HỆ</h5>
+				<p><i class="fas fa-map-marked-alt"></i> CS1: 99 Đặng Huy Trứ - Trường An - Tp.Huế.</p>
+				<p><i class="fas fa-map-marked-alt"></i> CS2: 54 Chu Văn An - Phú Hội - Tp.Huế.</p>
+				
+				<p><i class="fas fa-phone-alt"></i> 032.966.9660</p>
+				<p><i class="fas fa-phone-alt"></i> 0913.710.333</p>
+				<p><i class="fas fa-envelope"></i> cskh@petshop.com.vn</p>
+			</div>
+			<div class="col-sm-3  ">
+				<h5 class="border_ft">GIỚI THIỆU</h5>
+				<p><i class="fas fa-angle-right"></i> Giới thiệu</p>
+				<p><i class="fas fa-angle-right"></i> Tuyển dụng</p>
+				<p><i class="fas fa-angle-right"></i> Liên hệ </p>
+				<p><i class="fas fa-angle-right"></i> Hướng dẫn đặt hàng </p>
+				<p><i class="fas fa-angle-right"></i> Thanh toán và vận chuyển </p>
+			</div>
+			<div class="col-sm-3 ">
+				<h5 class="border_ft">HỖ TRỢ</h5>
+				<p><i class="fas fa-angle-right"></i> Chính sách thanh toán</p>
+				<p><i class="fas fa-angle-right"></i> Chính sách vận chuyển</p>
+				<p><i class="fas fa-angle-right"></i> Chính sách đổi trả </p>
+				<p><i class="fas fa-angle-right"></i> Chính sách bảo mật</p>
+				
+				<p><i class="fas fa-angle-right"></i> Điều khoản dịch vụ </p>
+			</div>
+		</div><hr>
+		<div class="text-center endd">
+
+			<b>©</b> Bản quyền thuộc về <b>Petshop Bảoo Ngọc</b> | Cung cấp bởi<b> Bảoo Ngọc</b>
+		</div>
+	</footer>
+	<div class="hotline_new">
+		<a href="">0913710333</a>
+	</div>
+	<button  onclick="topFunction()" id="myBtn" title="Go to top"><svg width="50" height="50" fill="currentColor" class="bi bi-arrow-up-square" viewBox="0 0 16 16"><path  fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.5 9.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/></svg></button>
+</body>
+</html>

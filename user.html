@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="text/css" href="images/logotitle.png" style="width: 100px;">
+        <title>Quản lý người dùng</title>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet" />
+        <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
+            crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
+            crossorigin="anonymous"></script>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+        <style>
+          *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu' ,sans-serif;
+}
+.row{
+    display: flex;
+}   
+:root{
+    --blue: #bb908f;
+    --white: #fff;
+    --grey: #f5f5f5;
+    --black1:#222;
+    --black2: #999;
+}
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.container{
+    position: relative;
+    width: 100%;
+}
+.navigation{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: #953734;
+    border-left: 10px solid var(--blue);
+    transition: 0.5s;
+    overflow: hidden;
+    /* z-index: -1; */
+}
+.navigation.active{
+    width: 80px;
+}
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.navigation ul li:hover,
+.navigation ul li.hovered
+{
+    background: var(--white);
+}
+.navigation ul li:nth-child(1){
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+}
+.navigation ul li:hover a,
+.navigation ul li.hovered a{
+    color: var(--blue);
+}
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+.navigation ul li a .icon i{
+    font-size: 1.75rem;
+}
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0px 10px var(--white);
+    pointer-events: none;
+}
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after{
+    content: '';
+    position: absolute;
+    right: 0;   
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0px 10px var(--white);
+    pointer-events: none;
+}
+
+
+/* main */
+
+.main{
+    position:absolute ;
+    width:  107% ;
+    left: 324px;
+    
+    background: var(--white);
+    transition: 0.5s;
+}
+.main.active{
+    width: calc(100% - 80px);
+    left: 80px;
+}
+.topbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4rem;
+    cursor: pointer;
+}
+.search{
+    position: relative;
+    width: 400px;
+    max-width: 0 10px;
+}
+.search label{
+    position: relative;
+    width: 100%;
+}
+.search label input{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid var(--black2);
+}
+.search label i{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.2em;
+}
+.user{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.user img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.graphBox{
+    position: relative;
+    width: 100%;
+    padding: 20px ;
+    display: grid;
+    grid-template-columns:  1fr 2fr;
+    grid-gap: 30px;
+    min-height: 200px;
+}
+.graphBox .box{
+    position: relative;
+    background: var(--white);
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 7px 25px rgb(113, 110, 110);
+    border-radius: 20px;
+}
+
+
+
+
+        </style>
+
+        
+    </head>
+    <body class="sb-nav-fixed" >
+      <div class="container " style="margin-left:-25px ;">
+        <div class="navigation">
+          <ul>
+            <li >
+              <a href="" style="color:black ; font-size :20px;font-family: 'Source Sans Pro', sans-serif;">
+                <span class="icon"><i class='bx bxl-android'></i></span>
+                <span class="title"><b>ADMIN PETSHOP</b></span>
+              </a>
+            </li>
+            <li>
+              <a href="admin.html" class="active"  >
+                <span class="icon"><i class='bx bx-home'></i></span>
+                <span class="title">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="management.html" >
+                <span class="icon"><i class='bx bxl-product-hunt'></i></span>
+                <span class="title"> Quản lý sản phẩm</span>
+              </a>
+            </li>
+            <li>
+              <a href="user.html"style="color:black ;">
+                <span class="icon"><i class='bx bxs-user-account'></i></span>
+                <span class="title"><b>Quản lý người dùng</b></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon"><i class='bx bx-food-menu'></i></span>
+                <span class="title">Quản lý đơn hàng</span>
+              </a>
+            </li>
+            <li>
+              <a href="index.html">
+                <span class="icon"><i class='bx bx-captions'></i></span>
+                <span class="title">Quản lý giao diện</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon"><i class='bx bx-message'></i></span>
+                <span class="title">Message</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon"><i class='bx bx-cog'></i></span>
+                <span class="title">Cài đặt </span>
+              </a>
+            </li>
+            <li>
+              <a href="login.html">
+                <span class="icon"><i class='bx bx-log-in'></i></span>
+                <span class="title">Đăng xuất </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+    
+    
+    
+        <div class="main">
+          <div class="topbar" style="background-color:gray ;">
+            <div class="toggle" style="margin-left:-10px">
+              <a href="" style="color:#222"><i class='bx bx-menu'></i></a>
+            </div>
+            <div class="search">
+              <label>
+                <input type="text" placeholder="Tìm kiếm">
+                <i class='bx bx-search-alt-2'></i>
+              </label>
+            </div>
+            <div class="user">
+              <a href="register.html"><img src="images/shin4.jfif" width="100" height="100" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div id="layoutSidenav_content" style="padding-left:350px ;padding-right:100px">
+
+            <div class="product">
+                <div class="title" style="padding-top:30px ;padding-bottom:30px;padding-top: 100px;"><h3>Quản lý người dùng</h3></div>
+
+                <!-- <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class=" fas fa-plus mr-2"></i>Create</button> -->
+                <table class="table ">
+                    <thead class="thead-light text-center">
+                        <tr>
+                            <th>ID</th>
+                            <th>Username</th>
+                            <th>Name</th>
+                            <th>SĐT</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>Role</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center" id="user-admin">
+                     
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+        <!-- Button trigger modal -->
+
+
+        <!-- Modal -->
+        <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Thêm người dùng</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" class="form-row">
+                          
+                           
+                            <div class="col-12 mt-3">
+                                <label for="">Name</label>
+                                <input class="form-control" type="text" id="name" placeholder="Name">
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="">Username</label>
+                                <input class="form-control" type="text" id="username" placeholder="Username">
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="">password</label>
+                                <input class="form-control" type="password" id="password">
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="">Số điện thoại</label>
+                                <input class="form-control" type="text" id="Sđt">
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="">Email</label>
+                                <input class="form-control" type="text" id="email">
+                            </div>
+                            <div class="col-8 mt-3">
+                                <label for="">Địa chỉ</label>
+                                <input class="form-control" type="text" id="address">
+                            </div>
+                            <div class="col-4 mt-3">
+                                <label for="">Role</label>
+                                <input class="form-control" type="text" id="role">
+                            </div>
+                        </form>
+                        <a class="btn btn-outline-danger mt-3" href="" onclick="addUser()">Thêm</a>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Exit</button>
+                         <button type="button" class="btn btn-primary">Save changes</button> 
+                    </div>
+                </div>
+            </div>
+        </div> --> 
+        <div class="modal fade" id="updateProduct" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Cập nhật</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-row">
+                            <div class="col-6 mt-3">
+                                <label for="">ID</label>
+                                <input class="form-control" type="text" id="id">
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="">Username</label>
+                                <input class="form-control" type="text" id="username1">
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="">Name</label>
+                                <input class="form-control" type="text" id="name1">
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="">Password</label>
+                                <input class="form-control" type="text" id="password1">
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="">Số điện thoại</label>
+                                <input class="form-control" type="text" id="sdt1">
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="">Email</label>
+                                <input class="form-control" type="text" id="email1">
+                            </div>
+                            <div class="col-8 mt-3">
+                                <label for="">Địa chỉ</label>
+                                <input class="form-control" type="text" id="address1">
+                            </div>
+                            <div class="col-4 mt-3">
+                                <label for="">Role</label>
+                                <input class="form-control" type="text" id="role1">
+                            </div>
+                            <div id="Update" >Cập nhật</div>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="JS/script.js"></script>
+    <script src="JS/management.js"></script>
+    <script src="JS/product.js"></script>
+    <script src="JS/admin.js"></script>
+    <script src="JS/register.js"></script>
+    <script src="JS/user.js"></script>
+    <script src="JS/oder.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+    <!-- <script src="assets/demo/datatables-demo.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
+    
+</html>

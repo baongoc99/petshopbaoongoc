@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="text/css" href="images/logotitle.png" style="width: 100px;">
+	<title>Spa-Grooming</title>
+	<link rel="stylesheet" type="text/css" href="css/spa.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script>
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+	        document.getElementById("myBtn").style.display = "block";
+	    } else {
+	        document.getElementById("myBtn").style.display = "none";
+	    }
+	}
+
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+	    document.body.scrollTop = 0;
+	    document.documentElement.scrollTop = 0;
+	}
+	</script>
+	<script>
+		  'use strict'
+
+		  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+		  var forms = document.querySelectorAll('.needs-validation')
+
+		  // Loop over them and prevent submission
+		  Array.prototype.slice.call(forms)
+		    .forEach(function (form) {
+		      form.addEventListener('submit', function (event) {
+		        if (!form.checkValidity()) {
+		          event.preventDefault()
+		          event.stopPropagation()
+		        }
+
+		        form.classList.add('was-validated')
+		      }, false)
+		    })
+		
+	</script>
+</head>
+<body>
+	<header>
+		<div class="header">
+			<div class="row text-center  " style="padding-top: 5px;">
+				<div class="col-4 text-start " style="padding-left:60px">
+					<a href="index.html">Kênh người bán </a>|					
+					<a href="">Tải ứng dụng </a>|
+					<a href="">Kết nối </a>
+					<a href=""><i class="fab fa-facebook"></i></a>
+					<a href=""><i class="fab fa-instagram"></i></a>  
+				</div>
+				<div class="col-4">
+				</div>
+				<div class="col-4 text-end" style="padding-right:60px">
+					<a href=""><i class="far fa-bell"></i> Thông báo </a>|
+					<a href=""><i class="far fa-question-circle"></i> Hỗ trợ </a>|
+					<a data-bs-toggle="offcanvas" href="#offcanvasExample1" role="button" aria-controls="offcanvasExample"><i class="far fa-user"></i> Đăng nhập </a>
+					  <form class="offcanvas offcanvas-end needs-validation" tabindex="-1" id="offcanvasExample1" aria-labelledby="offcanvasExampleLabel" novalidate >
+	                    <div class="offcanvas-header" style="background-color: #ee4d2d	;">
+	                      <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+	                        <div style="margin-bottom: -30px;" class="title">
+	                          <p style="font-size:25px; margin-left: 110px; margin-bottom: 10px;" class="text-center">Đăng nhập</p>
+	                          <hr style="margin-left:110px;">
+	                        </div>
+	                      </h5>
+	                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+	                    </div>
+	                    <div class="offcanvas-body">
+	                      <div class="row">
+		                      <div class="logo" style="padding-bottom:20px">
+		                        <a href=""><img style="width: 370px; height: 170px" src="images/logo.png"></a>
+		                      </div>
+	                      </div>
+	                      <div class="form-floating mb-3" >
+	                        <input style="width: 90%; margin-left: 16px; height: 40px;" type="email" class="form-control rounded-2" id="validationCustom01" placeholder="name@example.com" required>
+	                        <label style="font-size: 15px; margin-left: 20px; margin-top: -7px;" class="form-label text-muted " for="validationCustom01" >Email/Số điện thoại/Tên đăng nhập</label>
+	                        <div class="valid-feedback">
+						      Hợp lệ!
+						    </div>
+	                      </div>
+	                      <div class="form-floating mb-3">
+	                        <input style="width: 90%; margin-left: 16px; height: 40px;" type="email" class="form-control rounded-2" id="floatingInput" placeholder="name@example.com">
+	                        <label style="font-size: 15px; margin-left: 20px; margin-top: -7px;" class="text-muted" for="floatingInput">Mật khẩu</label>
+	                      </div>
+	                      <div class="row">
+	                        <div class="col-auto">
+	                            <div class="form-check">
+	                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"style="margin-left: -8px;">
+	                                <label class="form-check-label" for="flexCheckDefault">
+	                                </label>
+	                              </div>
+	                        </div>
+	                        <div class="col-auto" style="padding-bottom:20px">
+	                            <p  class="text-muted" style="margin-left: -18px;">Nhớ mật khẩu</p>
+	                        </div>
+	                        <button style="background-color: #ee4d2d;width: 250px;margin-left: 62px; " type="submit" class="btn btn-danger mb-3 a rounded-5 text-center" >Đăng nhập</button>
+	                        <div class="row">
+	                          <div style="margin-left: 20px; margin-top: 10px;" class="col text-start">
+	                            <a class="text-primary" href="#">Quên mật khẩu</a>
+	                          </div>
+	                          <div style="margin-top: 10px;" class="col text-end text-primary">
+	                            <a class="text-primary" href="#">Đăng nhập với SMS</a>
+	                          </div>
+	                          <hr style="margin-left:15px;"><br>
+	                          <div style="margin-left: -10px;padding-top: 20px;" class="row">
+	                            <div class="col">
+	                              <button type="button " style="border:none;" class="btn "><i class="fa-brands fa-facebook text-primary" style="font-size: 30px;"></i></button>
+	                            </div>
+	                            <div class="col">
+	                              <button type="button" style="border:none;" class="btn "><i class="fa-brands fa-google text-success" style="font-size: 30px;"></i></button>
+	                            </div>
+	                            <div class="col">
+	                              <button type="button" style="border:none;" class="btn "><i class="fa-brands fa-apple" style="font-size: 35px;margin-top: -5px;"></i></button>
+	                            </div>
+	                          </div>
+	                          <p style="margin-top: 20px; margin-left: -35px;" class="text-muted">Bạn là khách hàng mới?<a style="color:blue ; font-size: 15px;" href="#"> Đăng ký</a></p>
+	                        </div>
+	                    </div>
+	                  </div>
+                	</form>
+            	</div>
+    		</div>
+		</div>
+	</header>
+	<content >
+		<div class="trang1">   
+            <a href="#1"><img src="images/trang1.png" style="width:100%"></a>
+        </div>
+		<div class="trang2">
+			<img src="images/trang2.png" style="width:100%;margin-bottom:100px">
+		</div>
+		<div class="trang3">
+			<img src="images/trang3.png" style="width:100%;margin-bottom:100px">
+		</div>
+		<div class="trang4">
+			<img src="images/trang4.png" style="width:100%;margin-bottom:100px">
+		</div>
+		<div class="trang5" id="1">
+			<img src="images/banggia.png" style="width:80%;margin-left:150px;">
+		</div>
+		<div class="row" id="2" style="background-color: #fff7ea;">
+			<div class="col">
+				<img src="images/trang6.png" width="100%">
+			</div>
+			<div class="col" style="background-color:#fdd07f">
+				<div class="text-center" style="padding-top:20px;"><img src="images/tieude.png"></div>
+				<div class="formm" style="border: 2px solid #fff">
+					<input class="form-control" type="text" placeholder="Tên người đặt lịch" aria-label="default input example">
+				</div>
+				<div class="formm" style="border: 2px solid #fff">
+					<input class="form-control" type="text" placeholder="Số điện thoại" aria-label="default input example">
+				</div>
+				<div class="formm" style="border: 2px solid #fff">
+					<div class="form-check">
+					  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" style="margin-left:-10px">
+					  <label class="form-check-label" for="flexRadioDefault1" style="margin-left:10px">
+					    Chó
+					  </label>
+					</div>
+					<div class="form-check">
+					  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" style="margin-left:-10px" checked>
+					  <label class="form-check-label" for="flexRadioDefault2" style="margin-left:10px">
+					    Mèo
+					  </label>
+					</div>
+				</div>
+				<div class="formm"><img src="images/dichvucun.png"></div>
+				<div class="formm"style="border: 2px solid #fff">
+					<div class="form-check">
+					  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" style="margin-left:-10px">
+					  <label class="form-check-label" for="flexRadioDefault1" style="margin-left:10px">
+					    Cạo
+					  </label>
+					</div>
+					<div class="form-check">
+					  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" style="margin-left:-10px" checked>
+					  <label class="form-check-label" for="flexRadioDefault2" style="margin-left:10px">
+					    Combo tắm vệ sinh
+					  </label>
+					</div>
+					<div class="form-check">
+					  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" style="margin-left:-10px">
+					  <label class="form-check-label" for="flexRadioDefault1" style="margin-left:10px">
+					    Combo Tắm + Cạo toàn thân
+					  </label>
+					</div>
+					<div class="form-check">
+					  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" style="margin-left:-10px" checked>
+					  <label class="form-check-label" for="flexRadioDefault2" style="margin-left:10px">
+					    Combo Tắm + Cạo thẩm mỹ
+					  </label>
+					</div>
+					<div class="form-check">
+					  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" style="margin-left:-10px">
+					  <label class="form-check-label" for="flexRadioDefault1" style="margin-left:10px">
+					    Trọn gói Tắm vệ sinh & Căt tạo kiểu (full)
+					  </label>
+					</div>
+				</div>
+				<div class="formm"><img src="images/dichvumeo.png"></div>
+				<div class="formm"style="border: 2px solid #fff">
+					<div class="form-check">
+					  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" style="margin-left:-10px" checked>
+					  <label class="form-check-label" for="flexRadioDefault2" style="margin-left:10px">
+					    Combo tắm vệ sinh
+					  </label>
+					</div>
+					<div class="form-check">
+					  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" style="margin-left:-10px">
+					  <label class="form-check-label" for="flexRadioDefault1" style="margin-left:10px">
+					    Combo Tắm + Cạo trừ 4 chân và đầu
+					  </label>
+					</div>
+					<div class="form-check">
+					  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" style="margin-left:-10px">
+					  <label class="form-check-label" for="flexRadioDefault1" style="margin-left:10px">
+					    Trọn gói Tắm vệ sinh & Căt tạo kiểu (full)
+					  </label>
+					</div>
+				</div>
+				<div class="formm" style="border: 2px solid #fff;margin-bottom: 20px;">
+					<input class="form-control" type="text" placeholder="Thời gian đặt lịch" aria-label="default input example">
+				</div>
+				<div class="btn btn-danger gui"style="margin-left:290px;border-radius: 24rem;margin-bottom: 50px;">
+						<div class="text-center" >
+							<p class="text-center">GỬI PETSHOP</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</content>
+	<footer>
+		<div class="row " style="margin-right: -10px;">
+			<div class="col-sm-3  text-center">
+				<img src="images/logo.png" width="80%" style="margin-top:-20px"><br>
+				<img src="images/facebook.png"style="width:40px; height:40px">
+				<img src="images/zalo.png" style="width:40px; height:40px">
+				<img src="images/sendo.png" style="width:40px; height:40px"><br>
+				<img src="images/logocuoi.png" width="50%">
+				
+			</div>
+			<div class="col-sm-3  ">
+				<h5 class="border_ft" >LIÊN HỆ</h5>
+				<p><i class="fas fa-map-marked-alt"></i> CS1: 99 Đặng Huy Trứ - Trường An - Tp.Huế.</p>
+				<p><i class="fas fa-map-marked-alt"></i> CS2: 54 Chu Văn An - Phú Hội - Tp.Huế.</p>
+				
+				<p><i class="fas fa-phone-alt"></i> 0979.793.593</p>
+				<p><i class="fas fa-phone-alt"></i> 033.969.0011</p>
+				<p><i class="fas fa-envelope"></i> cskh@petshop.com.vn</p>
+			</div>
+			<div class="col-sm-3  ">
+				<h5 class="border_ft">GIỚI THIỆU</h5>
+				<p><i class="fas fa-angle-right"></i> Giới thiệu</p>
+				<p><i class="fas fa-angle-right"></i> Tuyển dụng</p>
+				<p><i class="fas fa-angle-right"></i> Liên hệ </p>
+				<p><i class="fas fa-angle-right"></i> Hướng dẫn đặt hàng </p>
+				<p><i class="fas fa-angle-right"></i> Thanh toán và vận chuyển </p>
+			</div>
+			<div class="col-sm-3 ">
+				<h5 class="border_ft">HỖ TRỢ</h5>
+				<p><i class="fas fa-angle-right"></i> Chính sách thanh toán</p>
+				<p><i class="fas fa-angle-right"></i> Chính sách vận chuyển</p>
+				<p><i class="fas fa-angle-right"></i> Chính sách đổi trả </p>
+				<p><i class="fas fa-angle-right"></i> Chính sách bảo mật</p>
+				
+				<p><i class="fas fa-angle-right"></i> Điều khoản dịch vụ </p>
+			</div>
+		</div><hr>
+		<div class="text-center endd">
+
+			<b>©</b> Bản quyền thuộc về <b>Petshop Bảoo Ngọc</b> | Cung cấp bởi<b> Bảoo Ngọc</b>
+		</div>
+	</footer>
+	<div class="hotline_new">
+		<a href="#2" >Đặt lịch ngay </a>
+	</div>
+	<button  onclick="topFunction()" id="myBtn" title="Go to top"><svg width="50" height="50" fill="currentColor" class="bi bi-arrow-up-square" viewBox="0 0 16 16"><path  fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.5 9.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/></svg></button>
+</body>
+</html>

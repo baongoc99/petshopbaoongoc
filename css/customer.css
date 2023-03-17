@@ -1,0 +1,192 @@
+body{
+    overflow-x: hidden;
+}
+header {
+	background-color: #e7a9a7;
+	font-weight: bold;
+}
+header hr{
+    margin: 5px;
+    margin-bottom: 15px;
+}
+header a:hover{
+    color: rgba(255, 99, 71, 1);
+
+}
+header a{
+	text-decoration: none;
+	color: black;
+}
+header .logo_1 img{
+    margin-top: -20px;
+	margin-left: 50px;
+   
+}
+header .navbar{
+    display: flex;
+    position: relative;
+    padding-top: 30px;
+    overflow: hidden;
+    margin-left: 70px;
+}
+header h6{
+    font-family: "Lucida Console", "Courier New", monospace bold ;
+    font-size: 20px;
+    padding-left: 350px;
+    padding-top: 8px;
+    color: red;
+    animation-name: example;
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
+
+}
+@keyframes example {
+  from {color: red;}
+  to {color: white;}
+  
+}
+header .buy i {
+    padding-top: 35px;
+    font-size: 30px;
+}
+header .header2 .row {
+    height: 52px;
+    line-height: 52px;
+    float: left;
+    width: 100%;
+    margin-left: 100px;
+}
+header .header2 {
+    border-bottom: 52px solid #e8e8e8;
+}
+header .header2 a {
+    padding: 15px 25px 15px 25px;
+
+}
+header .header2 a:hover{
+    background-color:rgba(255, 99, 71, 1) ;
+    color: white;
+    padding: 15px 25px 15px 25px;
+}
+header .small {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 150px;
+    list-style: none;    
+}  .main-container {
+    background-color: #fff;
+    min-height: 400px;
+    padding: 20px 0 0px;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+biểu định kiểu tác nhân người dùng
+div {
+    display: block;
+}
+body {
+    color: #333;
+    font-size: 13px;
+    font-family: 'Open Sans';
+    padding: 0;
+    margin: auto;
+    line-height: 1.55;
+}
+table thead th, table thead td, table tfoot th, table tfoot td, .cart .totals table th, .cart .totals table td {
+    color: #333;
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+    
+}
+.table>:not(:last-child)>:last-child>* {
+    border-bottom-color: currentColor;
+    background-color: lightgray;
+}
+table th {
+    line-height: 20px;
+    padding: 10px;
+    font-weight: bold;
+    
+    
+}
+th {
+    text-align: left;
+}
+.recent-orders .title-buttons {
+    
+    margin-bottom: 8px;
+}
+.col2-right-layout .col-main .page-title {
+    padding: 0px 0px 4px 0px;
+    margin: 0 0 10px;
+}
+.page-title {
+    padding: 0px 0px 10px 0px;
+    margin: 0 0 0px 0px;
+    overflow: hidden;
+}
+
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.block .block-title span {
+    border-bottom: 2px solid #6c78b4;
+    display: inline-block;
+    height: 30px;
+}
+.block .block-title {
+    border-bottom: 2px solid #ddd;
+    color: #000;
+   
+    
+    font-weight: 700;
+    height: 30px;
+    letter-spacing: .5px;
+    margin: 0;
+    text-transform: uppercase;
+}
+.block {
+    margin: 0 0 35px;
+}
+
+.col-right {
+    margin-bottom: 0px;
+}
+
+.block .block-content {
+    border-top: medium none;
+    
+    overflow: hidden;
+    padding: 15px 0;
+}
+footer {
+    background-color: #e7a9a7;
+    padding-top: 30px;
+}
+footer h5 {
+    padding-bottom: 15px;
+    padding-left: 30px;
+}
+footer p{
+    padding-left: 5px;
+}
+footer i{
+    padding-right: 5px;
+}
+footer img{
+    margin: 5px;
+}
+footer .endd{
+    background-color: black;
+    color: #6c757d;
+    padding-top: 6px;
+    margin-top: -17px;
+    height: 39px;
+}
